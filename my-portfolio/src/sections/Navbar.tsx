@@ -20,18 +20,16 @@ export default function Navbar() {
     ];
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            window.pageYOffset > 100
-                ? setNavbarVisible(true)
-                : setNavbarVisible(false);
-        });
-        window.addEventListener("scroll", () => {
-        });
+        const handleScroll = () => {
+            setNavbarVisible(window.pageYOffset > 100);
+        };
+
+        window.addEventListener("scroll", handleScroll);
         return () => {
-            window.removeEventListener("scroll", () => {
-            });
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
 
     useEffect(() => {
         const links = document.querySelectorAll(".nav-items-list-item-link");
