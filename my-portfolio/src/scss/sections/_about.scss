@@ -164,6 +164,12 @@
       }
     }
     &-grid {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
       &-photo {
         margin-top: 3rem;
 
@@ -183,11 +189,6 @@
           margin-right: 0;
         }
       }
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
     }
   }
   @media screen and (max-width: 480px) {
