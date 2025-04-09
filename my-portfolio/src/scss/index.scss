@@ -1,5 +1,5 @@
-@import "variables";
-@import "globals";
-@import "main";
-@import "components/index";
-@import "sections/index";
+@use "variables";
+@use "globals";
+@use "main";
+@use "components";
+@use "sections";

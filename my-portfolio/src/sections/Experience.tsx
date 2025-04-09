@@ -59,7 +59,7 @@ export function Experience() {
                 }}
             >
                 <div className="title">
-                    <h2>Where I've worked: </h2>
+                    <h2>Where I&apos;ve worked: </h2>
                 </div>
                 <div className="container">
                     <ul className="exp-slider">

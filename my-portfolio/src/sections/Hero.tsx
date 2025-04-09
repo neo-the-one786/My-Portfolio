@@ -2,14 +2,13 @@ import Link from "next/link";
 import {Button} from "@/components/Button";
 import {motion} from "framer-motion";
 import {useEffect, useState} from "react";
-import Image from "next/image";
 
 export function Hero() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const [index, setIndex] = useState(1);
+    const [_, setIndex] = useState(1);
     const toRotate = ["Programmer", "Web Developer", "Data Science Enthusiast"];
     const smileys = [':)', ';)', ':P'];
     const [smileyIndex, setSmileyIndex] = useState(0);
@@ -22,17 +21,10 @@ export function Hero() {
             clearInterval(ticker)
         };
     }, [text])
-    useEffect(() => {
-        const smileyInterval = setInterval(() => {
-            setSmileyIndex((prev) => (prev + 1) % smileys.length);
-        }, 800);
-        return () => clearInterval(smileyInterval);
-    }, []);
-
     const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+        const i = loopNum % toRotate.length;
+        const fullText = toRotate[i];
+        const updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
         setText(updatedText);
         if (isDeleting) {
             setDelta(prevDelta => prevDelta / 2);
@@ -50,6 +42,12 @@ export function Hero() {
             setIndex(prevIndex => prevIndex + 1);
         }
     }
+    useEffect(() => {
+        const smileyInterval = setInterval(() => {
+            setSmileyIndex((prev) => (prev + 1) % smileys.length);
+        }, 800);
+        return () => clearInterval(smileyInterval);
+    }, [tick, delta, smileys.length]);
     return (
         <>
             <div className="hero">
@@ -130,9 +128,6 @@ export function Hero() {
                     <Button text="Check out my Resume" link="https://youtube.com/"></Button>
                 </motion.div>
             </div>
-            {/*<span className="hero-photo-container">*/}
-            {/*    <Image src="/Profile_Photo_Formal_Best-removebg.png" alt="pfp" fill></Image>*/}
-            {/*</span>*/}
         </>
     );
 }

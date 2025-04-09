@@ -16,10 +16,10 @@ export function Contact() {
                     hidden: { opacity: 0, y: 0 },
                 }}
             >
-                <h2 className="contact-title">What's next?</h2>
+                <h2 className="contact-title">What&apos;s next?</h2>
                 <h2 className="contact-sub-title">Get in Touch</h2>
                 <p className="contact-text">
-                    My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to reach out to you
+                    My inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to reach out to you
                 </p>
                 <div className="contacts-cta">
                     <Button text="Say Hello" link="mailto:divyanshumishrathecoder1729@gmail.com"></Button>

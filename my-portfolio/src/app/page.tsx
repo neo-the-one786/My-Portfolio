@@ -16,12 +16,6 @@ import {useState} from "react";
 import Head from "next/head";
 import Loader from "@/components/Loader";
 
-const raleway = Raleway({subsets: ["latin"]})
-const firaCode = Fira_Code({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"]
-})
-
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
     const [showContent, setShowContent] = useState(false);
@@ -34,8 +28,8 @@ export default function Home() {
         <>
             <div className="app">
                 <Head>
-                    <title>Kishan Sheth</title>
-                    <link rel="shortcut icon" href="/favicon.ico"/>
+                    <title>Divanshu Mishra</title>
+                    <link rel="icon" type="image/png" href="/DM_Logo_Fin.png"/>
                 </Head>
                 {showContent && (
                     <>

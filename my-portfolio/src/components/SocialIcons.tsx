@@ -1,6 +1,6 @@
 import {FiGithub, FiLinkedin, FiYoutube} from "react-icons/fi";
 import Link from "next/link";
-import {SiCodechef, SiCodeforces, SiGeeksforgeeks, SiKaggle, SiLeetcode, SiNumpy} from "react-icons/si";
+import {SiCodechef, SiCodeforces, SiGeeksforgeeks, SiKaggle, SiLeetcode} from "react-icons/si";
 
 export default function SocialIcons() {
     const socialIcons = [

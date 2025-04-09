@@ -144,7 +144,7 @@ export default function Projects() {
                                 </div>
                                 <div className="project-info">
                                     <p className="project-info-overline">Featured Project</p>
-                                    <h3 className="project-info-title">{projectName}</h3>
+                                    <a className="project-info-title" href={projectLink}>{projectName}</a>
                                     <div className="project-info-description">
                                         <p>{projectDescription}</p>
                                     </div>
@@ -160,6 +160,7 @@ export default function Projects() {
                                             <Link
                                                 href={projectExternalLinks.github}
                                                 className="project-info-links-item-link"
+                                                target="_blank"
                                             >
                                                 <FiGithub/>
                                             </Link>
