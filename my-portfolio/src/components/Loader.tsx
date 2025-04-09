@@ -1,10 +1,16 @@
 import React, {useEffect} from "react";
 import {AnimatePresence, motion} from "framer-motion";
 
-export default function Loader({isLoading, setIsLoading}: any) {
+
+type LoaderProps = {
+    isLoading: boolean;
+    setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export default function Loader({ isLoading, setIsLoading }: LoaderProps) {
     useEffect(() => {
         setTimeout(() => {
-            setIsLoading();
+            setIsLoading(true);
         }, 1900);
     }, [setIsLoading]);
     return (

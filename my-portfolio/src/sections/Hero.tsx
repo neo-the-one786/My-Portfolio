@@ -8,13 +8,13 @@ export function Hero() {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const [_, setIndex] = useState(1);
+    const [, setIndex] = useState(1);
     const toRotate = ["Programmer", "Web Developer", "Data Science Enthusiast"];
     const smileys = [':)', ';)', ':P'];
     const [smileyIndex, setSmileyIndex] = useState(0);
     const period = 2000;
     useEffect(() => {
-        let ticker = setInterval(() => {
+        const ticker = setInterval(() => {
             tick();
         }, delta);
         return () => {

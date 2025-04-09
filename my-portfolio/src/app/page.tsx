@@ -2,8 +2,6 @@
 
 import "@/scss/index.scss"
 import Navbar from "@/sections/Navbar"
-import {Raleway} from "next/font/google"
-import {Fira_Code} from "next/font/google"
 import SocialIcons from "@/components/SocialIcons";
 import Email from "@/components/Email";
 import {Hero} from "@/sections/Hero";

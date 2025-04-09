@@ -37,7 +37,7 @@ export default function Navbar() {
             e.stopPropagation();
         });
         const html = document.querySelector("html");
-        html?.addEventListener("click", (_) => {
+        html?.addEventListener("click", () => {
             setResponsiveNavVisible(false);
         });
     }, []);
