@@ -25,6 +25,12 @@ export default function Navbar() {
                 ? setNavbarVisible(true)
                 : setNavbarVisible(false);
         });
+        window.addEventListener("scroll", () => {
+        });
+        return () => {
+            window.removeEventListener("scroll", () => {
+            });
+        };
     }, []);
 
     useEffect(() => {
